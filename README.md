@@ -15,3 +15,13 @@ The Fisher–Yates shuffle, in its original form, was described in 1938 by Ronal
 5. The sequence of numbers written down in step 3 is now a random permutation of the original numbers.
 
 Provided that the random numbers picked in step 2 above are truly random and unbiased, so will the resulting permutation be. Fisher and Yates took care to describe how to obtain such random numbers in any desired range from the supplied tables in a manner which avoids any bias. They also suggested the possibility of using a simpler method — picking random numbers from one to N and discarding any duplicates—to generate the first half of the permutation, and only applying the more complex algorithm to the remaining half, where picking a duplicate number would otherwise become frustratingly common.
+
+//To shuffle an array a of n elements (indices 0..n-1):
+  for i from n − 1 downto 1 do
+       j ← random integer with 0 ≤ j ≤ i
+       exchange a[j] and a[i]
+
+####Number Reversal
+Given a jumbled list of the numbers 1 to 9 that are definitely not in ascending order, show the list then ask the player how many digits from the left to reverse. Reverse those digits, then ask again, until all the digits end up in ascending order.
+The score is the count of the reversals needed to attain the ascending order.
+Note: Assume the player's input does not need extra validation.
